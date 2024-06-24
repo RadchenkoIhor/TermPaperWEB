@@ -1,0 +1,252 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(images/bg.jpg);
+	background-position: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: rgba(0, 0, 0, 0.68);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+	border-bottom: 1px ridge black;
+}
+
+.site-header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-header .logo img {
+    height: 50px;
+    margin-right: 10px;
+	margin-left: 10px;
+}
+
+.site-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.site-header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.site-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-header nav ul li a:hover {
+    color: LimeGreen;
+    text-decoration: underline;
+}
+
+.main-news,
+.gallery,
+.news,
+.about,
+.contacts {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 20px;
+	margin-left: 25%;
+	margin-right: 25%;
+	height: 100%;
+	flex: 1;
+}
+
+.main-news h2,
+.gallery h2,
+.news h2,
+.contacts h2 {
+    text-align: center;
+}
+
+.site-footer {
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.news-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#loadMore {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#loadMore:hover {
+    background-color: #555;
+}
+
+.text-outline {
+    color: white;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+	width: 50%;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont {
+	padding: 20px;
+}
+
+.contimge {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+		
+.imge {
+	width: 420px;
+	height: 300px;
+	border: 4px solid rgba(255, 255, 255, 0.55);
+	overflow: hidden;
+}
+		
+.imge img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	transition: .5s;
+}
+		
+.imge:hover img {
+	transform: scale(1.1);
+}
+		
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+		
+.popup img {
+	border: 4px solid white;
+	border-radius: 15px;
+	max-width: 90%;
+	max-height: 90%;
+}
+		
+.popup span {
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+		
+.pagination {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.pagination a {
+	margin: 0 5px;
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-news,
+    .gallery,
+    .news,
+	.about,
+    .contacts {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+			
+	.slider {
+		width: 90%;
+	}
+}
